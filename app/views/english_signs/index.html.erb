@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing English Signs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @english_signs.each do |english_sign| %>
+      <tr>
+        <td><%= english_sign.phrase %></td>
+        <td><%= english_sign.filename %></td>
+        <td><%= link_to 'Show', english_sign %></td>
+        <td><%= link_to 'Edit', edit_english_sign_path(english_sign) %></td>
+        <td><%= link_to 'Destroy', english_sign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New English sign', new_english_sign_path %>

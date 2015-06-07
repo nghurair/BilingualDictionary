@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @english_sign.phrase %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @english_sign.filename %>
+</p>
+
+<%= link_to 'Edit', edit_english_sign_path(@english_sign) %> |
+<%= link_to 'Back', english_signs_path %>
